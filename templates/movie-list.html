@@ -1,0 +1,31 @@
+<div class="home container">
+	<div class="row">
+		<div class="col-lg-3 col-md-4 col-xs-6 col-xxs-12" ng-repeat="movie in $ctrl.movies">
+			<div class="movie-item">
+				<div class="movie-img">
+					<a ui-sref="movie({id: movie.id})">
+						<img ng-src="{{movie.cover | trustUrl}}">
+					</a>
+				</div>
+				<div class="movie-info">
+					<div class="movie-title">
+						<h6>{{movie.name}}</h6>
+					</div>
+					<div class="movie-year">
+						<p>{{movie.year}}</p>	
+						<div class="movie-stars">
+							<ul class="ratings">
+								<li ng-repeat="i in [1, 2, 3, 4, 5]"">
+									<i class="fa" 
+									   ng-class="{'fa-star': i<=movie.rating, 'fa-star-o': i>movie.rating}" 
+									   aria-hidden="true">
+									</i>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+</div>

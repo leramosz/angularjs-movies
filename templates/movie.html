@@ -1,0 +1,31 @@
+<div class="container movie-detail">
+	<div class="row">
+		<div class="col-lg-6 col-md-6">
+			<iframe width="100%" height="315" 
+				ng-src="{{ 'https://www.youtube.com/embed/' + movieCtrl.movie.trailer | trustUrl }}" frameborder="0" allowfullscreen>
+			</iframe>
+		</div>
+		<div class="col-lg-6 col-md-6">
+			<h2>{{movieCtrl.movie.name}}</h2>
+			<div class="movie-subinfo">
+				<span>{{movieCtrl.movie.year}} | </span> 
+				<span>{{movieCtrl.movie.duration | number:0}} min. </span>
+				<span>
+					<div class="movie-stars">
+						<ul class="ratings">
+							<li ng-repeat="i in [1, 2, 3, 4, 5]"">
+								<i class="fa" 
+								   ng-class="{'fa-star': i<=movieCtrl.movie.rating, 'fa-star-o': i>movieCtrl.movie.rating}" 
+								   aria-hidden="true">
+								</i>
+							</li>
+						</ul>
+					</div>
+				</span>
+			</div>
+			<div class="movie-description">
+				{{movieCtrl.movie.description}}
+			</div>
+		</div>
+	</div>
+</div>

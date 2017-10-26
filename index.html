@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body ng-app='MovieAPP' ng-strict-di>
+
+  	<header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="pull-left visible-md visible-lg">
+            <div id="logo-img" alt="Logo image"></div>
+          </a>
+
+          <div class="navbar-brand">
+            <a ui-sref="home"><h1>Movies@com</h1></a>
+          </div>
+
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+        <div id="collapsable-nav" class="collapse navbar-collapse" 
+             ng-controller="HeadController as headCtrl">
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+             <li class="visible-xs">
+              <a ui-sref="home">Home</a>
+             </li>
+             <li ng-repeat="category in headCtrl.categories">
+              <a ui-sref="category({id: category.id})"><br class="hidden-xs">{{category.name}}</a>
+             </li>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+  <ui-view></ui-view>
+
+  </body>
+
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/angular.min.js"></script>
+  <script src="assets/js/angular-ui-router.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+
+  <script src="app/module.js"></script>
+  <script src="app/routes.js"></script>
+  <script src="app/controllers.js"></script>
+  <script src="app/services.js"></script>
+  <script src="app/filters.js"></script>
+  <script src="app/components.js"></script>
+
+</html>
