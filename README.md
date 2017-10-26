@@ -12,7 +12,7 @@ The APP connects to the API located @ http://ror-movies.herokuapp.com. The endpo
 - List of movies => /api/movies
 - Detail of a movie => /api/movies/{id}
 - List of categories => /api/categories
-- List if movies by category => /api/categories/{id}
+- List of movies by category => /api/categories/{id}
 
 A live runnig version can be found @ https://leramosz.github.io/angularjs-movies/#/
 
