@@ -27,6 +27,7 @@ function DataService($http, ApiBasePath, $location) {
             }).then(function (response) {
                return response.data
             }).catch(function(error) {
+               //return error.data;
                $location.url('/404/');
             });
   };
