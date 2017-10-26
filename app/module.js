@@ -1,6 +1,7 @@
 (function() {
 
-  "use strict";
-  angular.module('MovieAPP', ['ui.router']);
+"use strict";
+
+angular.module('MovieAPP', ['ui.router']);
 
 })();
