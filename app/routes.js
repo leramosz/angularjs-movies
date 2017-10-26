@@ -13,10 +13,10 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   // *** Set up UI states ***
   $stateProvider
 
-  // .state('404', {
-  //   url:'/404/',
-  //   templateUrl: 'templates/error.html'
-  // })
+  .state('404', {
+    url:'/404/',
+    templateUrl: 'templates/error.html'
+  })
 
   // Home page
   .state('home', {
