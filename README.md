@@ -7,7 +7,7 @@ Simple Web APP built in AngularJS connecting to an API RESTFul. The APP lists th
 - List of categories
 - List of movies by category
 
-The APP connects to the API located at http://ror-movies.herokuapp.com. The endpoints are the following:
+The APP connects to the API located @ http://ror-movies.herokuapp.com. The endpoints are the following:
 
 - List of movies => /api/movies
 - Detail of a movie => /api/movies/{id}
