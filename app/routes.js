@@ -8,15 +8,15 @@ RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 function RoutesConfig($stateProvider, $urlRouterProvider) {
 
   // Redirect to home page if no other URL matches
-  $urlRouterProvider.otherwise('/404/');
+  $urlRouterProvider.otherwise('/');
 
   // *** Set up UI states ***
   $stateProvider
 
-  .state('404', {
-    url:'/404/',
-    templateUrl: 'templates/error.html'
-  })
+  // .state('404', {
+  //   url:'/404/',
+  //   templateUrl: 'templates/error.html'
+  // })
 
   // Home page
   .state('home', {
